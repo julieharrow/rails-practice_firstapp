@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+
+  root 'welcome#index'   #ADDED AS THE ROUTE FOR MY HOMEPAGE
+
+  # get 'welcome/index'   DELETED because it is now the root
+
+  get 'thisisus' => 'welcome#about'   #ADDED 'thisisus =>' and changed / to # because it turns into a pointer to "CONTROLLER#ACTION" versus the literal print "CONTROLLER/ACTION"
+
+  get 'contact' => 'welcome#contact'   #DITTO
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
